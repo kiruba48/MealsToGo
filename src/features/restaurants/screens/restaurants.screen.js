@@ -1,8 +1,21 @@
 import React from 'react';
 import { StyleSheet, View } from 'react-native';
 import { Searchbar } from 'react-native-paper';
-import RestaurantInfo from '../components/restaurant-info.component';
+import RestaurantInfoCard from '../components/restaurant-info.component';
 
+const restaurant = {
+  name: 'Cafe Deadend',
+  icon: 'https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/lodging-71.png',
+  photos: [
+    'https://www.foodiesfeed.com/wp-content/uploads/2019/06/top-view-for-box-of-2-burgers-home-made-600x899.jpg',
+  ],
+  rating: 4.3,
+  address: '82nd Street, New York',
+  isClosedTemporarily: false,
+  openingHours: {
+    IsOpenNow: true,
+  },
+};
 export default function RestaurantsScreen() {
   const [searchQuery, setSearchQuery] = React.useState('');
 
@@ -17,7 +30,7 @@ export default function RestaurantsScreen() {
         />
       </View>
       <View style={styles.list}>
-        <RestaurantInfo />
+        <RestaurantInfoCard restaurant={restaurant} />
       </View>
     </>
   );
