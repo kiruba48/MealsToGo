@@ -4,13 +4,13 @@ import { Searchbar } from 'react-native-paper';
 import RestaurantInfoCard from '../components/restaurant-info.component';
 
 const SearchContainer = styled.View`
-  padding: 16px;
+  padding: ${(props) => props.theme.space[3]};
 `;
 
 const RestaurantInfoCardContainer = styled.View`
   flex: 1;
-  padding: 16px;
-  background-color: blue;
+  padding: ${(props) => props.theme.space[3]};
+  ${'' /* background-color: ${(props) => props.theme.colors.brand.primary}; */}
 `;
 
 const restaurant = {
