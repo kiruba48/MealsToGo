@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components/native';
 import { Searchbar } from 'react-native-paper';
-import RestaurantInfoCard from '../components/restaurant-info.component';
+import RestaurantInfoCard from '../components/restaurant-info-card/restaurant-info.component';
 
 const SearchContainer = styled.View`
   padding: ${(props) => props.theme.space[3]};
@@ -23,7 +23,7 @@ const restaurants = [
     ],
     rating: 4.3,
     address: '82nd Street, New York',
-    isClosedTemporarily: false,
+    isClosedTemporarily: true,
     openingHours: {
       IsOpenNow: true,
     },
